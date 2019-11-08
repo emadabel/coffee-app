@@ -2,10 +2,13 @@ package coffee;
 
 import dagger.Lazy;
 
+import javax.inject.Inject;
+
 class CoffeeMaker {
     private final Lazy<Heater> heater;
     private final Pump pump;
 
+    @Inject
     CoffeeMaker(Lazy<Heater> heater, Pump pump) {
         this.heater = heater;
         this.pump = pump;
